@@ -1,9 +1,10 @@
 # Day 14 - Higher and Lower Game
 
+import random
 from unicodedata import name
 from gameData import data
 from art import logo, vs
-import random
+
 
 # import only system from os
 from os import system, name
