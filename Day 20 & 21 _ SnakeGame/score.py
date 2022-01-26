@@ -25,3 +25,13 @@ class ScoreBoard(Turtle):
     def print_score(self):
         '''Prints the score each time'''
         self.write(arg=f"SCORE: {self.count}",move = False, align=align, font=font_type)
+        
+    def thank_you_screen(self):
+        '''Triggers THANK YOU sequence'''
+        self.goto(0,0)
+        self.write(arg="Thank You for Playing!",move = False, align=align, font=font_type)
+    
+    def Invalid_screen(self):
+        '''Triggers Invalid Screen sequence'''
+        self.goto(0,0)
+        self.write(arg="Invalid Choice!",move = False, align=align, font=font_type)

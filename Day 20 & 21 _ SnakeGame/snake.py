@@ -1,7 +1,7 @@
 # Day 20 _ Snake game project
 
-from turtle import Turtle, Screen
-import time
+from turtle import Turtle
+
 
 move_forward = 20
 go_up = 90
