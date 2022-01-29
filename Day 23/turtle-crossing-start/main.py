@@ -40,9 +40,6 @@ while game_is_on:
     
     for car in cars.all_cars:
         if player.distance(car) < 30:
-            screen.clear()
-            screen.setup(width=600, height=600)
-            screen.title('Turtle Crossing')
             score_board.game_over()
             game_is_on = False
         
