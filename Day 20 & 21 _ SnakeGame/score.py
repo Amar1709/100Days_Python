@@ -15,16 +15,22 @@ class ScoreBoard(Turtle):
         self.hideturtle()
         self.goto(0,260)
         self.count = 0
+        with open('Day 20 & 21 _ SnakeGame\high_score.txt') as file:
+            self.high_score = int(file.read())
         self.print_score()
         
     def end_game(self):
         '''Triggers GAME OVER sequence'''
+        if self.high_score <= self.count:
+            self.high_score = self.count
+            with open('Day 20 & 21 _ SnakeGame\high_score.txt','w') as file:
+                file.write(f"{self.high_score}")
         self.goto(0,0)
         self.write(arg="GAME OVER!",move = False, align=align, font=font_type)
         
     def print_score(self):
         '''Prints the score each time'''
-        self.write(arg=f"SCORE: {self.count}",move = False, align=align, font=font_type)
+        self.write(arg=f"SCORE: {self.count}\t\tHIGH SCORE: {self.high_score}",move = False, align=align, font=font_type)
         
     def thank_you_screen(self):
         '''Triggers THANK YOU sequence'''
@@ -35,3 +41,4 @@ class ScoreBoard(Turtle):
         '''Triggers Invalid Screen sequence'''
         self.goto(0,0)
         self.write(arg="Invalid Choice!",move = False, align=align, font=font_type)
+        
