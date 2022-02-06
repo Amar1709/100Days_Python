@@ -21,7 +21,8 @@
 
 # add(1,2,3,4,5)
 
-def calculate(n,**kwargs):
+# Unlimited Keyword arguments - **kwargs
+def calculate(n,**kwargs): 
     print(kwargs)   # kwargs is a dictionary
     # for key,value in kwargs:
     #     print(key)
