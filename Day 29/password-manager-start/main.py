@@ -1,7 +1,8 @@
 
-# Day 29 project: Password Manager
+# Day 29 project: Password Manager 
+# Day 30 upgrades made
 
-import random
+import random,json
 from tkinter import *
 from tkinter import messagebox
 import pyperclip
@@ -44,6 +45,8 @@ def add_password():
     email_id = entry_2.get()
     password = entry_3.get()
     
+    new_data = {website:{'email_id':email_id, 'password':password}}
+    
     if len(website) == 0 or len(email_id) == 0 or len(password) == 0:
         messagebox.showerror("Error", "Please enter all the fields")
     
@@ -51,12 +54,47 @@ def add_password():
         is_ok = messagebox.askokcancel(title = "Confirm",message= f"Do you want to save this password?\n\nWebsite: {website}\nEmail ID: {email_id}\nPassword: {password}")
         
         if is_ok:
-            with open("Day 29/password-manager-start/passwords.txt", "a") as file:
-                file.write(f"\n{entry_1.get()}\t||\t{entry_2.get()}\t||\t{entry_3.get()}")
+            # with open("Day 29/password-manager-start/passwords.txt", "a") as file:
+            #     file.write(f"\n{entry_1.get()}\t||\t{entry_2.get()}\t||\t{entry_3.get()}")
+            #     messagebox.showinfo("Success", "Password saved successfully and copied to clipboard")
+            #     pyperclip.copy(password) #copies the password to the clipboard
+            try:
+                with open ("Day 29\password-manager-start\passwords.json",'r') as json_file:
+                    data = json.load(json_file) #loads the json file
+            
+            except FileNotFoundError:
+                with open ("Day 29\password-manager-start\passwords.json",'w') as json_file:
+                    json.dump(new_data, json_file, indent=4)
                 messagebox.showinfo("Success", "Password saved successfully and copied to clipboard")
+            
+            else:
+                data.update(new_data) #updates the data
+                with open ("Day 29\password-manager-start\passwords.json", "w") as json_file:
+                    json.dump(data,json_file,indent=4) # saves the data to the json file
+                messagebox.showinfo("Success", "Password saved successfully and copied to clipboard")
+            
+            finally:
                 pyperclip.copy(password) #copies the password to the clipboard
-            entry_1.delete(0, END)
-            entry_3.delete(0, END)
+                entry_1.delete(0, END)
+                entry_3.delete(0, END)
+                
+# ---------------------------- PASSWORD FINDER ------------------------------- #
+
+def search_password():
+    '''Searches the password from the password file'''
+    try:
+        with open ("Day 29\password-manager-start\passwords.json",'r') as json_file:
+            data = json.load(json_file)
+    except FileNotFoundError:
+        messagebox.showerror("Error", "No passwords saved yet")
+    else:
+        website = entry_1.get()
+        if website in data:
+            messagebox.showinfo(f"{website}", f"\nEmail: {data[website]['email_id']}\nPassword: {data[website]['password']}")
+            pyperclip.copy(data[website]['password'])
+            entry_3.insert(0,data[website]['password'])
+        else:
+            messagebox.showerror("Error", "No password found for this website")
 
 # ---------------------------- UI SETUP ------------------------------- #
 
@@ -83,9 +121,9 @@ label_3 = Label(window, text="Password: ", font=FONT2, bg=BG,highlightthickness=
 label_3.grid(row=3, column=0,columnspan=1)
 label_3.config(padx=5, pady=5)
 
-entry_1 = Entry(window, font=FONT2,width=35)
+entry_1 = Entry(window, font=FONT2,width=21)
 entry_1.focus()
-entry_1.grid(row=1, column=1,columnspan=2)
+entry_1.grid(row=1, column=1,columnspan=1)
 
 entry_2 = Entry(window, font=FONT2,width=35)
 entry_2.grid(row=2, column=1,columnspan=2)
@@ -103,5 +141,9 @@ generate_pass.config(padx=5, pady=5)
 add_button = Button(window, text="Add", font=FONT, bg=BG,width=36,command=add_password) #command=add_password
 add_button.grid(row=4, column=1,columnspan=2)
 add_button.config(padx=10, pady=10)
+
+search_button = Button(window, text="Search", font=FONT, bg=BG,width=12,command=search_password) #command=search_password
+search_button.grid(row=1, column=2,columnspan=1)
+search_button.config(padx=5, pady=5)
 
 window.mainloop()
