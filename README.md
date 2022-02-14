@@ -38,7 +38,11 @@ Day 29 - Password Manager GUI using Tkinter
 
 Day 30 - Exception Handling and JSON file handling concepts used on Password Manager
 
-Day 31 onwards...to be done
+Day 31 - Flash Card App using Tkinter
+
+Day 32 - Automated Birthday Wisher using smptlib and mailmerge
+
+Day 33 onwards...to be done
 
 Practicing Python concepts daily.
 Multiple projects built and many more to come.
