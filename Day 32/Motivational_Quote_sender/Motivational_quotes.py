@@ -2,8 +2,8 @@
 
 import smtplib
 
-my_email = "obitouchiha0917@gmail.com"
-password = "#ShinobiRoxx1720"
+my_email = "abc12@mail.com"
+password = "abc12345"
 
 
 
