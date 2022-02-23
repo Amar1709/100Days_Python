@@ -73,8 +73,8 @@ wrong_img = PhotoImage(file="Day 31/flash-card-project-start/images/wrong.png")
 right_img = PhotoImage(file="Day 31/flash-card-project-start/images/right.png")
 
 wrong_button = Button(window, image=wrong_img, bg=BACKGROUND_COLOR,highlightthickness=0,command=flash_cards)
-wrong_button.grid(row=1, column=0)
+wrong_button.grid(row=2, column=0)
 right_button = Button(window, image=right_img, bg=BACKGROUND_COLOR,highlightthickness=0,command=isknown)
-right_button.grid(row=1, column=1)
+right_button.grid(row=2, column=1)
 
 window.mainloop()
