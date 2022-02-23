@@ -1,13 +1,21 @@
 
 # Random Question Generator
 from random import randint
+from unicodedata import category
 import requests
+
+parameters = {
+    "amount": 10,
+    "type": "boolean",
+}
 
 type = randint(1,2)
 if type == 1:
-    response = requests.get('https://opentdb.com/api.php?amount=10&category=31&type=boolean') # Anime and Manga
+    parameters["category"] = 31 # Anime and Manga
 else:
-    response = requests.get('https://opentdb.com/api.php?amount=10&category=15&type=boolean') # Video Games
+    parameters["category"] = 15 # Video Games
+
+response = requests.get('https://opentdb.com/api.php',params=parameters)
 response.raise_for_status()
 
 question_data = response.json()['results']
