@@ -2,6 +2,8 @@
 
 #Upload it on a cloud service to automatically run it every day.
 
+#update environment variables
+
 from twilio.rest import Client
 import requests
 
@@ -14,8 +16,8 @@ LAT = 39.103119
 LONG = -84.512016
 
 api_key = "597145e24a94cf40351d25fd9250b624"
-account_sid = "ACcb95af7d9fc479b49efe71b944e1c640"
-auth_token = "4c7ce648935054fd989e2cf708507e20"
+account_sid = "ACCOUNT_SID"
+auth_token = "AUTH_TOKEN"
 
 parameters = {'lat': LAT, 'lon': LONG, 'appid': api_key, 'exclude': 'minutely,daily,current'}
 
