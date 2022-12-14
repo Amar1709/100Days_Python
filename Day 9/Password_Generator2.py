@@ -1,7 +1,5 @@
 # Password Generator using list comprehensions
 
-from unicodedata import digit
-
 
 alph = [chr(i) for i in range(97, 123)]
 alph2 = [chr(i) for i in range(65, 91)]
