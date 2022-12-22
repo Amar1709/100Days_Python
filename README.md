@@ -1,5 +1,7 @@
 # 100Days_Python
 
+<br>
+
 * Day 1 - Band Name Generator
 
 * Day 2 - Tip Calculator
@@ -62,7 +64,20 @@
 
 * Day 32 - Automated Birthday Wisher using smptlib and mailmerge
 
-* Day 33 -
+* Day 33 - Kanye Quotes App and ISS Overhead Notifier
 
-Practicing Python concepts daily.
-Multiple projects built and many more to come.
+* Day 34 - Quiz App using Tkinter
+
+* Day 35 - SMS via Twilio API
+
+* Day 36 - Stock Trading News Alert 
+
+* Day 37 - Habit Tracker
+
+* Day 38 - Workout Tracker
+
+<br>
+
+Day 39..(incomplete)...and more to come...
+
+
