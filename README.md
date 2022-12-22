@@ -1,48 +1,68 @@
 # 100Days_Python
 
-Details about Day 1 - 12 to be added...
+* Day 1 - Band Name Generator
 
-Day 12 - Number Guess Game
+* Day 2 - Tip Calculator
+  
+* Day 3 - Treasure Island
+  
+* Day 4 - Rock Paper Scissors
 
-Day 13 - Debugging basics
+* Day 5 - Password Generator
 
-Day 14 - Higher Lower game
+* Day 6 - Turtle Module Challenges and Conditional Programming
 
-Day 15 - Coffee Machine project
+* Day 7 - Hangman Game
 
-Day 16 - Coffee Machine using OOP
+* Day 8 - Caesar Cipher
 
-Day 17 - Simple Quiz using OOP concepts
+* Day 9 - Blind Auction Game
+  
+* Day 10 - Calculator
+  
+* Day 11 - Blackjack Game
+  
+* Day 12 - Number Guess Game
 
-Day 18 - Turtle graphics - challenges (OOP)
+* Day 13 - Debugging basics
 
-Day 19 - Turtle Race game
+* Day 14 - Higher Lower game
 
-Day 20, 21 - Snake Game
+* Day 15 - Coffee Machine project
 
-Day 22 - Pong Game 
+* Day 16 - Coffee Machine using OOP
 
-Day 23 - Turtle Crossing Game
+* Day 17 - Simple Quiz using OOP concepts
 
-Day 24 - File Handling concepts and Mail Merge project
+* Day 18 - Turtle graphics - challenges (OOP)
 
-Day 25 - US States guess game using File handling and OOP
+* Day 19 - Turtle Race game
 
-Day 26 - List and Dictionary Comprehensions practiced (Mini Project made)
+* Day 20, 21 - Snake Game
 
-Day 27 - Tkinter GUI application for Miles to KM converter
+* Day 22 - Pong Game 
 
-Day 28 - Pomodoro Timer using Tkinter
+* Day 23 - Turtle Crossing Game
 
-Day 29 - Password Manager GUI using Tkinter
+* Day 24 - File Handling concepts and Mail Merge project
 
-Day 30 - Exception Handling and JSON file handling concepts used on Password Manager
+* Day 25 - US States guess game using File handling and OOP
 
-Day 31 - Flash Card App using Tkinter
+* Day 26 - List and Dictionary Comprehensions practiced (Mini Project made)
 
-Day 32 - Automated Birthday Wisher using smptlib and mailmerge
+* Day 27 - Tkinter GUI application for Miles to KM converter
 
-Day 33 onwards...to be done
+* Day 28 - Pomodoro Timer using Tkinter
+
+* Day 29 - Password Manager GUI using Tkinter
+
+* Day 30 - Exception Handling and JSON file handling concepts used on Password Manager
+
+* Day 31 - Flash Card App using Tkinter
+
+* Day 32 - Automated Birthday Wisher using smptlib and mailmerge
+
+* Day 33 -
 
 Practicing Python concepts daily.
 Multiple projects built and many more to come.
