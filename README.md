@@ -75,9 +75,11 @@
 * Day 37 - Habit Tracker
 
 * Day 38 - Workout Tracker
+  
+* Day 39, 40 - Flight Club Project  
 
 <br>
 
-Day 39..(incomplete)...and more to come...
+Day 41..(incomplete)...and more to come...
 
 
